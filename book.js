@@ -39,6 +39,17 @@ class Books {
 const books = new Books();
 books.displayBooks();
 
+function updateDateTime() {
+  const currentDateTime = new Date();
+  const dateTimeOptions = {
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric',
+  };
+  document.getElementById('currentDateTime').textContent = currentDateTime.toLocaleDateString('en-US', dateTimeOptions);
+}
+
+updateDateTime();
+setInterval(updateDateTime, 1000);
+
 const addBookForm = document.getElementById('add-book-form');
 addBookForm.addEventListener('submit', (event) => {
   event.preventDefault();
