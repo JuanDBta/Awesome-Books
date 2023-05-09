@@ -2,7 +2,7 @@ import { Books } from './Books_class.js';
 
 const books = new Books();
 
-export function addBookSubmit() {
+const addBookSubmit = () => {
   const addBookForm = document.getElementById('add-book-form');
   addBookForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -12,9 +12,9 @@ export function addBookSubmit() {
     books.displayBooks();
     addBookForm.reset();
   });
-}
+};
 
-export function removeBookClick() {
+const removeBookClick = () => {
   const bookList = document.getElementById('book-list');
   bookList.addEventListener('click', (event) => {
     if (event.target.classList.contains('remove-title')) {
@@ -23,4 +23,6 @@ export function removeBookClick() {
       books.displayBooks();
     }
   });
-}
+};
+
+export { addBookSubmit, removeBookClick };
