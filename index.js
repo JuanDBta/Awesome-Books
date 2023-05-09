@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import { DateTime } from './node_modules/luxon/src/luxon.js';
 import { Books } from './modules/Books_class.js';
 import { updateDateTime } from './modules/display_time.js';
