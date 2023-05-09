@@ -1,4 +1,4 @@
-export default function controlNavBar(booklistSelector, addBookSelector, contactSelector) {
+export const controlNavBar = (booklistSelector, addBookSelector, contactSelector) => {
   const booklistBtn = document.querySelector(booklistSelector);
   const addBookBtn = document.querySelector(addBookSelector);
   const contactBtn = document.querySelector(contactSelector);
@@ -29,6 +29,6 @@ export default function controlNavBar(booklistSelector, addBookSelector, contact
     document.querySelector('.list_container').classList.add('dNone');
     document.querySelector('.list_container').classList.remove('Block');
   });
-}
+};
 
-export { controlNavBar };
+export default { controlNavBar };
